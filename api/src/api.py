@@ -6,3 +6,4 @@ api.http.add_middleware(hug.middleware.CORSMiddleware(api, allow_origins=["*"]))
 #Minhas rotas
 
 
+
