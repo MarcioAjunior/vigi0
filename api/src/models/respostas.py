@@ -4,11 +4,7 @@ from mongoengine import (
     ReferenceField,
     StringField
 )  
-from models.perguntas import Perguntas
 
-class Resposatas(Document) :
-    pergunta = ReferenceField(Perguntas)
+
+class Respostas(Document) :
     resposta = StringField(required=True)
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)

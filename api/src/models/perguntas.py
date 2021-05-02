@@ -5,12 +5,11 @@ from mongoengine import (
     StringField
 )   
 
-from models.pesquisas import Pesquisa
+from models.respostas import Respostas
 
 class Perguntas(Document):
-    pesquisa = ReferenceField(Pesquisa)
     title = StringField(required=True)
-    respostas = ListField(ReferenceField() default = [])
+    respostas = ListField(ReferenceField(Respostas))
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
