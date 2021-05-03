@@ -4,7 +4,6 @@ from controllers.pesquisasController import allPesquisas
 from mongoengine import connect
 
 api = hug.API(__name__)
-api.http.add_middleware(hug.middleware.CORSMiddleware(api, allow_origins=["*"]))
 connect(
    host="mongodb+srv://admin:admin@devunc-marcio.lkpu4.mongodb.net/vigi0",
    alias="default"
